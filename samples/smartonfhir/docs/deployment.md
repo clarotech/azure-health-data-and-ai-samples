@@ -26,9 +26,9 @@ Make sure you have the pre-requisites listed below
   - Azure Active Directory test account to represent Patient persona. Make sure you have the object id of the user from Azure Active Directory.
   - Azure Active Directory test account to represent Provider persona. Make sure you have the object id of the user from Azure Active Directory.
 
-## 2. Prepare and deploy environment
+## 2. Prepare and deploy the environment
 
-Next you will need to clone this repository and prepare your environment for deployment by creating two required Azure App Registrations and configuring your environment to use them.
+Next, you will need to clone this repository and prepare your environment for deployment by creating two required Azure App Registrations and configuring your environment to use them.
 
 1. Use the terminal or your git client to clone this repo. Open a terminal to the `samples/smartonfhir` folder.
 1. Login with the Azure Developer CLI. Specify the tenant if you have more than one. `azd auth login` or `azd auth login --tenant-id <tenant-id>`. Also login with the Azure CLI using `az login`.
@@ -46,8 +46,8 @@ Next you will need to clone this repository and prepare your environment for dep
     - During the execution of this command, you will need to select `subscription name` and `location` from the drop down to specify where all resources will get deployed. 
     - To create a new resource group for SMART on FHIR resources deployment, leave the `existingResourceGroupName` parameter blank; otherwise, enter the name of an existing resource group where you want to deploy all of your SMART on FHIR resources. 
     - If you want to create a new FHIR server instance, leave the `fhirid` parameter blank. Otherwise, provide the FHIR instance id of existing FHIR server instance in case you want to use existing FHIR server instance.
-    - To get the FHIR instance Id go to your fhir service and in left menu click on properties and Copy the Id field.
-    - Multiple SMART on FHIR apps can not be deployed in same resource group and it's expected to have FHIR server instance and SMART on FHIR resources deployed in same resource group.
+    - To get the FHIR instance Id go to your FHIR service and in the left menu click on properties and Copy the Id field.
+    - Multiple SMART on FHIR apps can not be deployed in the same resource group and it's expected to have FHIR server instance and SMART on FHIR resources deployed in same resource group.
     - You can continue the setup below. 
     ```
     azd up
@@ -79,7 +79,7 @@ As part of the scope selection flow, the Auth Custom Operation Azure Function wi
 
 1. Open the resource group created by step 3. Find the Azure API Management instance.
 1. Copy the Gateway URL for the API Management instance.
-1. Open your Application Registration for the Auth Context Frontend you created before deployment. Add `<gatewayURL>/auth/context/` as a sinple-page application redirect URI. Make sure to add the last slash.
+1. Open your Application Registration for the Auth Context Frontend you created before deployment. Add `<gatewayURL>/auth/context/` as a single-page application redirect URI. Make sure to add the last slash.
     - For example: `https://myenv-apim.azure-api.net/auth/context/`
 
 <br />
